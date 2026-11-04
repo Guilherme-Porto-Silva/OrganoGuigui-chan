@@ -1,0 +1,23 @@
+.memberCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.1rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+.memberCard img{
+    background: none;
+    border-radius: 60%;
+    width: 40%;
+}
+
+.memberCard h4{ color: #6278F7; }
+
+.memberCard p{
+    overflow-wrap: break-word;
+    text-align: center;
+}

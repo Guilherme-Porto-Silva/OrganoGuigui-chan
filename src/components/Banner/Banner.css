@@ -1,0 +1,41 @@
+h1{ display: block; }
+
+.banner{
+    display: grid;
+    width: 100vw;
+    background-color: #6278F7;
+    padding: 5% 0 0 5%;
+}
+
+.bannerBackground{
+    grid-area: 1 / 1;
+    width: 100%;
+}
+
+.banner section{
+    grid-area: 1 / 1;
+    z-index: 2;
+    align-self: start;
+    justify-self: start;
+    width: 100%;
+}
+
+.bannerLine{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.bannerTextConteiner{ padding: 30px; }
+
+.bannerIlustration{
+    width: 30%;
+}
+
+@media screen and (max-width: 800px) {
+    
+    .bannerLine{ justify-content: center; }
+
+    .logo{ margin-left: 10%; }
+}

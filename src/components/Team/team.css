@@ -1,0 +1,42 @@
+.team{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 20px;
+    width: 100%;
+}
+
+.cardLine{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 20px;
+}
+
+.cardConteiner{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    grid-auto-rows: max-content;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.team h3{
+    border-bottom: 0.25rem solid;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 850px) {
+    
+    .cardConteiner{
+        grid-template-columns: repeat(2, 40%);
+        gap: 10%;
+    }
+}
