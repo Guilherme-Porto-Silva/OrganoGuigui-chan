@@ -16,6 +16,17 @@ export default function Form (props) {
 
     const [teamState, setTeamState] = useState("Escolha seu time")
 
+    function clean () {
+
+        setNameState("")
+
+        setRoleState("")
+
+        setImageState("")
+
+        setTeamState("")
+    }
+
 //  "{nameState, roleState, imageState, teamState}" é uma forma mais inxuta de escrever um objeto JavaScript.
 
 //  Eu poderia ter feito algo parecido com os dicionários do Python e com o J.S.O.N.
@@ -26,18 +37,24 @@ export default function Form (props) {
 
         event.preventDefault()
 
+        if (!(imageState.contains(".png") || imageState.contains(".jpg") || imageState.contains(".jpeg") || imageState.contains(".pdf")))
+
+            setImageState(`${imageState}.png`)
+
         const saved = {nameState, roleState, imageState, teamState}
 
         props.onCadastrate(saved)
 
         console.log(`Cadastrei alguém assim: ${saved.nameState}, ${saved.roleState}, ${saved.imageState}, ${saved.teamState}`)
+
+        clean()
     }
 
 //  Em "whenChanged={state => setImageState(state)}", state é uma variavel criada agora.
 
 //  Seu nome poderia ser "jabuticaba", desde que seja o mesmo à esquerda e à direita da seta.
 
-    return (//parênteses para fazer um retorno de múltiplas linhas
+    return (
 
         <main>
 

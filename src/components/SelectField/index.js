@@ -23,6 +23,8 @@ export default function SelectField (params) {
 
             <select value={params.value} onChange={event => printValue(event.target.value)}>
 
+                <option value="">Escolha seu time</option>
+
                 {params.items.map((item) => <option key={item}>{item}</option>)}
 
             </select>
